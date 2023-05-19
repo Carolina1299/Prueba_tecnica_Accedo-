@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex Application</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-violet-100">
+    <nav>
+        <ul class="flex space-x-4">
+            <li>
+                <button class="bg-purple-700 text-white py-2 px-4 rounded-md">
+                    <a href="{% url 'pokemons' %}">Lista de Pokemons</a>
+                </button>
+                
+            </li>
+            {% if user.is_authenticated %}
+            <li>
+                <button class="bg-purple-700 text-white py-2 px-4 rounded-md">
+                    <a href="{% url 'signout' %}">Cerrar sesión</a>
+                </button>
+                
+            </li>
+            {% else %}
+            <li>
+                <button class="bg-purple-700 text-white py-2 px-4 rounded-md">
+                    <a href="{% url 'signup' %}">Registrarse</a>
+                </button>
+                
+            </li>
+            <li>
+                <button class="bg-purple-700 text-white py-2 px-4 rounded-md">
+                    <a href="{% url 'signin' %}">Iniciar sesión</a>
+                </button>
+                
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

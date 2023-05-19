@@ -1,0 +1,27 @@
+<!-- pokemon_detail.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-violet-600 font-serif text-7xl mb-7 text-center">Detalles del Pokémon</h1>
+<div class="bg-violet-100 flex justify-center items-center h-screen">
+    <div class="bg-white border-solid border-2 border-violet-300 p-8 shadow-md rounded-lg w-3/5 h-4/5">
+        <h2 class="text-5xl mb-8 items-center font-serif">{{ pokemon.name }}</h2>
+        <div class="flex justify-center items-center mb-4">
+            <img src="{{ pokemon.image_url }}" alt="{{ pokemon.name }} Image" class="w-80 h-80">
+        </div>
+        <div>
+            <p>Altura: {{ pokemon.height }}</p>
+            <p>Peso: {{ pokemon.weight }}</p>
+            <p>Tipo: {{ pokemon.type }}</p>
+            <p>Habilidades: {{ pokemon.abilities|join:', ' }}</p>
+            <!-- Agrega otros detalles del Pokémon que desees mostrar -->
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+
+

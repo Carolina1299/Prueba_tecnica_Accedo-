@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="flex justify-center items-center h-screen">
+    <div class="bg-purple-800 text-white p-8 rounded-lg ">
+        <h1 class="text-4xl mb-4 text-center font-serif">Registro</h1>
+        <p>{{ error }}</p>
+        <form action="/signin/" method="POST" class="flex flex-col space-y-4 text-black">
+            {% csrf_token %}
+            {{ form.as_p|safe }}
+            <button class="bg-purple-700 text-white py-2 px-4 rounded-md">
+                Registrar
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

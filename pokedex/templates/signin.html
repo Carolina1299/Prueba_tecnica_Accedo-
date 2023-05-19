@@ -1,0 +1,19 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="flex justify-center items-center h-screen">
+    <div class="bg-purple-800 text-black p-8 rounded-lg ">
+        <h1 class="text-4xl mb-4 text-center font-serif text-white">Iniciar sesión</h1>
+        <p>{{ error }}</p>
+        <form action="/signin/" method="POST" class="flex flex-col space-y-4 text-black ">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="bg-purple-700 text-white py-2 px-4 rounded-md">
+                Iniciar sesión
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="bg-violet-100">
+        <div class="text-center">
+            <h1 class="text-violet-600 font-serif text-7xl mb-8">Pokedex</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-4">
+            {% for pokemon in pokemones %}
+            <div class="border-solid border-2 border-violet-300 p-4 shadow-md rounded-md">
+                <li><a href="{% url 'pokemon_detail' pokemon.id %}">{{ pokemon.name }}</a></li>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
