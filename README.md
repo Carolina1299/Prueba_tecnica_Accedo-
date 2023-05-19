@@ -14,3 +14,12 @@ Este proyecto es una aplicación web que simula una Pokedex, una enciclopedia de
 - HTML/CSS: Lenguajes de marcado utilizados para la estructura y estilo de las páginas web.
 - Tailwind CSS: Framework CSS utilizado para agilizar el diseño y la apariencia de la interfaz de usuario.
 - PokeAPI: API utilizada para obtener información de los Pokémon, como sus detalles y características.
+
+## Instalación
+1. Clona este repositorio en tu máquina local.
+2. Crea un entorno virtual y actívalo.
+3. Instala las dependencias del proyecto utilizando pip install -r requirements.txt.
+4. Configura la conexión a la base de datos en el archivo settings.py.
+5. Ejecuta las migraciones de la base de datos utilizando python manage.py migrate.
+6. Inicia el servidor de desarrollo con python manage.py runserver.
+7. Abre tu navegador y visita http://localhost:8000 para acceder a la aplicación Pokedex.
